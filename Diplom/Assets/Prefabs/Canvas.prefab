@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -11.250008}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: -67, y: -118.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3315027865388195575
@@ -66,7 +66,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 53bd2da7b9ef39c4d9448fad5700e900, type: 3}
+    m_Font: {fileID: 12800000, guid: f7877c98e84c17943893294a7815f7cf, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
@@ -78,7 +78,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is dummy dialogue... It's not really too interesting.
+  m_Text: "\u041D\u0430\u0436\u043C\u0438 \"\u043F\u0440\u043E\u0431\u0456\u043B\"
+    \u0434\u043B\u044F \u043F\u0440\u0438\u0436\u043A\u0430."
 --- !u!1 &3315027865436622068
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,8 +117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 163}
-  m_SizeDelta: {x: 520, y: 210}
+  m_AnchoredPosition: {x: -24.172285, y: 153.23814}
+  m_SizeDelta: {x: 471.6553, y: 190.4762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3315027865436622073
 CanvasRenderer:
@@ -210,8 +211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 56.25}
-  m_SizeDelta: {x: -67, y: -166.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: 47.313778}
+  m_SizeDelta: {x: -67, y: -155.1275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3315027865537971015
 CanvasRenderer:
@@ -242,7 +243,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 53bd2da7b9ef39c4d9448fad5700e900, type: 3}
+    m_Font: {fileID: 12800000, guid: f7877c98e84c17943893294a7815f7cf, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -254,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NPC Name Here
+  m_Text: "\u0422\u0430\u0431\u043B\u0438\u0447\u043A\u0430 \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u0438"
 --- !u!1 &3315027866169063812
 GameObject:
   m_ObjectHideFlags: 0

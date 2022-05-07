@@ -37,10 +37,13 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharecterController.cs" />
-     <Compile Include="Assets\Scripts\AutoCameraSetup.cs" />
-     <Compile Include="Assets\Scripts\Dialogue.cs" />
      <Compile Include="Assets\Scripts\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\PlayerCombat.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <None Include="Assets\MainAssets\Assets\Taiga-Asset-Pack_v2_vnitti\Readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.24f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -674,6 +677,12 @@
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
         <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
     </Reference>
@@ -700,12 +709,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
         <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>D:\Диплом\Serhii-Hrudin-Diplom\Diplom\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
