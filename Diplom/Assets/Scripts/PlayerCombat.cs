@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     public int attackDamage;
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    bool canSecondAttack = true;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,14 +25,26 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Attack();
+                canSecondAttack = true;
+                Attack(1);
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
+        else if (canSecondAttack)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack(2);
+                canSecondAttack = false;
+            }
+        }
     }
-    void Attack()
+    void Attack(int attackNum)
     {
-        animator.SetTrigger("Attack");
+        if (attackNum == 1)
+            animator.SetTrigger("Attack");
+        if (attackNum == 2)
+            animator.SetTrigger("Attack2");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
