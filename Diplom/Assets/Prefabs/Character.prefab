@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974257626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: -0.45, z: 0}
+  m_LocalPosition: {x: 0.84, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2200384074372724223}
@@ -75,9 +75,10 @@ GameObject:
   - component: {fileID: 2200384074372724220}
   - component: {fileID: 2200384074372724221}
   - component: {fileID: 240927046}
+  - component: {fileID: 371836622}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,8 +138,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 442559199
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 4
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8298335142436343970, guid: 9ed0debcc99495b409fc2fbe81bae7ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,6 +211,7 @@ MonoBehaviour:
   knockBackForce: 1
   bounceForce: 1
   stopInput: 0
+  canMove: 1
 --- !u!95 &2200384074372724221
 Animator:
   serializedVersion: 3
@@ -248,7 +250,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 20
-  attackRate: 2
+  attackRate: 1
+--- !u!114 &371836622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200384074372724195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9693f191b83a35444afb0fba5ab45a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  invincibleLength: 1
 --- !u!1 &2200384075026954053
 GameObject:
   m_ObjectHideFlags: 0
