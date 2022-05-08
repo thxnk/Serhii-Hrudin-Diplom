@@ -13,6 +13,7 @@ public class CharecterHealthController : MonoBehaviour
 
     private SpriteRenderer theSR;
     public static CharecterHealthController instance;
+    public HealthBar healthBar;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class CharecterHealthController : MonoBehaviour
         currentHealth = maxHealth;
         theRB = GetComponent<Rigidbody2D>();
         theSR = GetComponent<SpriteRenderer>();
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class CharecterHealthController : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                healthBar.SetHealth(currentHealth);
                 currentHealth = 0;
                 CharecterController.instance.canMove = false;
                 theRB.velocity = new Vector2(0, 0);
@@ -57,6 +60,7 @@ public class CharecterHealthController : MonoBehaviour
             }
             else
             {
+                healthBar.SetHealth(currentHealth);
                 AudioManager.instance.PlaySFX(3);
                 invincibleCounter = invincibleLength;
                 theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, .5f);
