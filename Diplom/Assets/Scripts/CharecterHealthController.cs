@@ -51,11 +51,13 @@ public class CharecterHealthController : MonoBehaviour
                 currentHealth = 0;
                 CharecterController.instance.canMove = false;
                 theRB.velocity = new Vector2(0, 0);
+                AudioManager.instance.PlaySFX(4);
                 animator.SetTrigger("Death");
                 LevelManager.instance.RespawnPlayer();
             }
             else
             {
+                AudioManager.instance.PlaySFX(3);
                 invincibleCounter = invincibleLength;
                 theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b, .5f);
             }
