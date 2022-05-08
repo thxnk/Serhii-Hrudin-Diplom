@@ -36,5 +36,6 @@ public class LevelManager : MonoBehaviour
         CharecterController.instance.canMove = true;
         CharecterHealthController.instance.animator.SetTrigger("Alive");
         LevelChanger.instance.UnFade();
+        CharecterHealthController.instance.healthBar.SetHealth(CharecterHealthController.instance.currentHealth);
     }
 }
