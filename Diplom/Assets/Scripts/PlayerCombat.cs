@@ -46,9 +46,14 @@ public class PlayerCombat : MonoBehaviour
     {
         if (!second)
         {
+            AudioManager.instance.PlaySFX(1);
             animator.SetTrigger("Attack");
         }
-        else animator.SetTrigger("Attack2");
+        else
+        {
+            AudioManager.instance.PlaySFX(2);
+            animator.SetTrigger("Attack2");
+        }
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
