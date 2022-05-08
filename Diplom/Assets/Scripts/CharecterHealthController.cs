@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CharecterHealthController : MonoBehaviour
 {
+    public Rigidbody2D theRB;
     public int maxHealth;
-    private int currentHealth;
+    public int currentHealth;
     public float invincibleLength;
     private float invincibleCounter;
-    private Animator animator;
+    public Animator animator;
 
     private SpriteRenderer theSR;
     public static CharecterHealthController instance;
+
     private void Awake()
     {
         instance = this;
@@ -21,7 +23,7 @@ public class CharecterHealthController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
-
+        theRB = GetComponent<Rigidbody2D>();
         theSR = GetComponent<SpriteRenderer>();
     }
 
@@ -48,7 +50,9 @@ public class CharecterHealthController : MonoBehaviour
             {
                 currentHealth = 0;
                 CharecterController.instance.canMove = false;
+                theRB.velocity = new Vector2(0, 0);
                 animator.SetTrigger("Death");
+                LevelManager.instance.RespawnPlayer();
             }
             else
             {
