@@ -28,12 +28,13 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds((1f / 3f) + 3f);
 
-        LevelChanger.instance.UnFade();
+
 
         CharecterController.instance.transform.position = respawnPoint.position;
 
         CharecterHealthController.instance.currentHealth = CharecterHealthController.instance.maxHealth;
         CharecterController.instance.canMove = true;
         CharecterHealthController.instance.animator.SetTrigger("Alive");
+        LevelChanger.instance.UnFade();
     }
 }
