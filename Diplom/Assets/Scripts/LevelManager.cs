@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
+    private int coins = 0;
     public float waitToRespawn;
     public Transform respawnPoint;
 
@@ -13,6 +16,25 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    public void AddCoins()
+    {
+        coins++;
+        CoinsUI.instance.UpdateUI(coins);
+        if (coins == 2)
+        {
+            StartCoroutine(EndLevel());
+        }
+    }
+
+    private IEnumerator EndLevel()
+    {
+        LevelChanger.instance.Fade();
+        CharecterController.instance.canMove = false;
+        CharecterController.instance.theRB.velocity = new Vector2(0, 0);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void RespawnPlayer()
@@ -39,3 +61,4 @@ public class LevelManager : MonoBehaviour
         CharecterHealthController.instance.healthBar.SetHealth(CharecterHealthController.instance.currentHealth);
     }
 }
+
