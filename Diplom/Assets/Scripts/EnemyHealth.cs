@@ -43,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
             {
                 invincibleCounter = invincibleLength;
                 animator.SetTrigger("Hit");
-                AudioManager.instance.PlaySFX(3);
+                AudioManager.instance.PlaySFX(6);
             }
         }
     }
