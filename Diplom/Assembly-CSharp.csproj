@@ -39,11 +39,14 @@
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\CharecterController.cs" />
+     <Compile Include="Assets\Scripts\CharacterDamager.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\PlayerCombat.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\LevelChanger.cs" />
+     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -52,11 +55,8 @@
      <Compile Include="Assets\Scripts\Damager.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
      <Compile Include="Assets\Scripts\CharecterHealthController.cs" />
-     <Compile Include="Assets\Scripts\SettingMenu.cs" />
      <Compile Include="Assets\Scripts\HealthPickup.cs" />
-     <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
-     <Compile Include="Assets\EnemyHealth.cs" />
-     <Compile Include="Assets\CharacterDamager.cs" />
+     <Compile Include="Assets\Scripts\SettingMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\MainAssets\Assets\Taiga-Asset-Pack_v2_vnitti\Readme.txt" />
