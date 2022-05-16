@@ -30,10 +30,10 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(waitToRespawn - (1f / 3f));
+        LevelChanger.instance.Fade();
         CharecterController.instance.canMove = false;
         CharecterController.instance.theRB.velocity = new Vector2(0, 0);
-        LevelChanger.instance.Fade();
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
